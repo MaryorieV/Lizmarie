@@ -1,0 +1,100 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: transparent;
+}
+#bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: block;
+}
+.container {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  padding: 2rem 2.5rem;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+}
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.2rem 0;
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #aaa;
+  cursor: pointer;
+  transition: border 0.2s;
+  background-size: cover;
+  background-position: center;
+}
+.avatar.selected {
+  border: 3px solid #3b82f6;
+  box-shadow: 0 0 6px #3b82f6;
+}
+#startBtn, #nextBtn {
+  background: #3b82f6;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#startBtn:disabled {
+  background: #b4c8ee;
+  cursor: not-allowed;
+}
+#game {
+  margin-top: 1.5rem;
+}
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.answer-btn {
+  background: #e5e7eb;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.answer-btn.selected,
+.answer-btn:hover {
+  background: #c7d8f7;
+}
+#result {
+  font-weight: bold;
+  margin: 1rem 0 0.2rem;
+}
+.hidden {
+  display: none;
+}
